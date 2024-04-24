@@ -140,7 +140,7 @@ async def restart_handler(_, m):
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
-@bot.on_message(filters.command(["pro_txt"]))
+@bot.on_message(filters.command(["sendmendax"]))
 async def account_login(bot: Client, m: Message):
     user = m.from_user.id if m.from_user is not None else None
     if user is not None and user not in sudo_users:
@@ -189,7 +189,7 @@ async def account_login(bot: Client, m: Message):
     raw_text2 = input2.text
 
     editable4 = await m.reply_text(
-        "Now send the **Thumb url**\nEg : ```https://telegra.ph/file/d9e24878bd4aba05049a1.jpg```\n\nor Send **no**"
+        "Now send the **Thumb url**\nEg : ```https://graph.org/file/f4d4a6e3ed00365fed281.jpg```\n\nor Send **no**"
     )
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
@@ -401,8 +401,8 @@ async def account_login(bot: Client, m: Message):
             try:
                 Show = f"**Downloading:-**\n\n**Name :-** `{name}\nQuality - {raw_text2}`\n\n**Url :-** `{url}`"
                 prog = await m.reply_text(Show)
-                cc = f"**Name »** {name1} {res}.mkv\n**Batch »** {raw_text0}\n**Index »** {str(count).zfill(3)}"
-                cc1 = f"**Name »** ** {name1} {res}.pdf\n**Batch »** {raw_text0}\n**Index »** {str(count).zfill(3)}"
+                cc = f"**Name »** {name1} {res}𝙼𝚎𝚗𝚍𝚊𝚡.mkv\n**Batch »** {raw_text0}\n**Index »** {str(count).zfill(3)}"
+                cc1 = f"**Name »** ** {name1} {res}𝙼𝚎𝚗𝚍𝚊𝚡.pdf\n**Batch »** {raw_text0}\n**Index »** {str(count).zfill(3)}"
                 #                         await prog.delete (True)
                 #                 if cmd == "pdf" or "drive" in url:
                 #                     try:
@@ -475,7 +475,7 @@ async def account_login(bot: Client, m: Message):
         return
     else:
         editable = await m.reply_text(
-            "Hello Bruh **I am Anurag Downloader Bot**. I can download videos from **text** file one by one.**\n\nLanguage** : Python**\nFramework** : Pyrogram\n\nSend **TXT** File {Name : Link}")
+            "Hello Bruh **I am Mendax Downloader Bot**. I can download videos from **text** file one by one.**\n\nLanguage** : Python**\nFramework** : Pyrogram\n\nSend **TXT** File {Name : Link}")
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
